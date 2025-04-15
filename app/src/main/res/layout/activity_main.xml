@@ -16,7 +16,41 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <us.zoom.deepFlow.AnalyzerImage.view.SmileWaveView
+        android:id="@+id/smileWave"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:background="#33000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/previewView"
+        />
+    <TextView
+        android:id="@+id/smileTipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="这个人笑的有点猥琐～ 😊"
+        android:textSize="28sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:background="#66000000"
+        android:padding="8dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/previewView"
+        />
+    <Button
+        android:id="@+id/btn_switch_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="切换摄像头"
+        android:textSize="30dp"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintTop_toBottomOf="@+id/previewView"
+        app:layout_constraintBottom_toTopOf="@+id/btn_capture"/>
     <Button
         android:id="@+id/btn_capture"
         android:layout_width="match_parent"
@@ -24,7 +58,7 @@
         android:text="拍照分析"
         android:textSize="30dp"
         app:layout_constraintHeight_percent="0.2"
-        app:layout_constraintTop_toBottomOf="@+id/previewView"
+        app:layout_constraintTop_toBottomOf="@+id/btn_switch_camera"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 
